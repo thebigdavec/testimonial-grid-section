@@ -1,0 +1,110 @@
+/* @import https://fonts.google.com/specimen/Barlow+Semi+Condensed */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+:root {
+    --clr-violet: hsl(263, 55%, 52%);
+    --clr-mid-blue: hsl(217, 19%, 35%);
+    --clr-dark-blue: hsl(219, 29%, 14%);
+    --clr-light-grey: hsl(0, 0%, 81%);
+    --clr-light-blue: hsl(210, 46%, 95%);
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin: 0;
+    background: var(--clr-light-blue);
+    color: var(--clr-dark-blue);
+    line-height: 1.4;
+}
+
+.wrapper {
+    display: grid;
+    gap: 25px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 4rem auto;
+}
+
+.card {
+    background: var(--bg, white);
+    color: var(--fg, var(--clr-dark-blue));
+    padding: 1.75rem;
+    border-radius: 8px;
+}
+
+.purple {
+    --bg: var(--clr-violet);
+    --fg: white;
+}
+
+.grey {
+    --bg: var(--clr-mid-blue);
+    --fg: white;
+}
+
+.blue {
+    --bg: var(--clr-dark-blue);
+    --fg: white;
+}
+
+.quotes {
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-position-y: top;
+    background-position-x: 90%;
+    background-repeat: no-repeat;
+}
+
+.name {
+    font-size: smaller;
+    font-weight: 500;
+}
+
+.position {
+    font-size: small;
+    opacity: 0.5;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.short-desc {
+    font-size: 21px;
+    margin-bottom: 1rem;
+}
+
+img {
+    width: 30px;
+    border-radius: 50px;
+    border: 1px solid white;
+    margin-right: 1rem;
+}
+
+.desc {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+@media (min-width: 1000px) {
+    .wrapper {
+        margin: 11rem auto;
+        grid-template-areas: 'dan dan jon kira' 'jeanette pat pat kira';
+    }
+    .dan {
+        grid-area: dan;
+    }
+    .jon {
+        grid-area: jon;
+    }
+    .jeanette {
+        grid-area: jeanette;
+    }
+    .pat {
+        grid-area: pat;
+    }
+    .kira {
+        grid-area: kira;
+    }
+}
